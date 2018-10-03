@@ -1,0 +1,16 @@
+<phpunit
+        bootstrap="vendor/autoload.php"
+        colors="true"
+        beStrictAboutTestsThatDoNotTestAnything="true"
+        beStrictAboutOutputDuringTests="true"
+        enforceTimeLimit="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        beStrictAboutChangesToGlobalState="true">
+    <testsuites>
+        <testsuite name="gtmc-php-sdk">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
