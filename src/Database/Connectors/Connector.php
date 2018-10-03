@@ -42,7 +42,7 @@ abstract class Connector
      */
     public function createConnection(string $dsn, array $config): PDO
     {
-        return new PDO($dsn, ($config['username'] ?? null), ($config['password'] ?? null), $this->getOptions($config));
+        return new PDO($dsn, $config['username'] ?? null, $config['password'] ?? null, $this->getOptions($config));
     }
 
     /**
@@ -53,6 +53,6 @@ abstract class Connector
      */
     public function getOptions(array $config): array
     {
-        return array_merge(array_diff_key($this->options, ($config['options'] ?? [])), ($config['options'] ?? []));
+        return array_merge(array_diff_key($this->options, $config['options'] ?? []), $config['options'] ?? []);
     }
 }
