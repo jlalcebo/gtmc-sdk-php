@@ -44,7 +44,7 @@ class Factory
      * @param string $adapter Adapter name.
      * @return Adapter
      */
-    public function getAdapter(string $adapter): Adapter
+    protected function getAdapter(string $adapter): Adapter
     {
         switch (strtolower($adapter)) {
             case 'local':
