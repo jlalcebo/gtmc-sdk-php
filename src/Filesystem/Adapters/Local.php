@@ -37,9 +37,11 @@ class Local extends Adapter
         if (!Utils::checkRequireOptions($config, static::$reqOpts) === true) {
             throw new InvalidArgumentException('Required option for adapter is missing.');
         }
+        // Set default for not required options.
+        $config = array_merge(['writeFlags' => null, 'linkHandling' => null, 'permissions' => []], $config);
         // Create instance and return.
         return new Filesystem(
-            new LeagueLocal($config['root'])
+            new LeagueLocal($config['root'], $config['writeFlags'], $config['linkHandling'], $config['permissions'])
         );
     }
 }
