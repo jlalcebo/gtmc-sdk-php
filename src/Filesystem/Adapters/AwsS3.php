@@ -17,6 +17,10 @@ use League\Flysystem\AwsS3v3\AwsS3Adapter;
 use League\Flysystem\Filesystem;
 use League\Flysystem\FilesystemInterface;
 
+/**
+ * Class AwsS3
+ * @package Gtmc\Filesystem\Adapters
+ */
 class AwsS3 extends Adapter
 {
     /**
@@ -24,7 +28,7 @@ class AwsS3 extends Adapter
      *
      * @var array
      */
-    protected static $reqOpts = ['region', 'version', ];
+    protected static $reqOpts = ['region', 'version'];
 
     /**
      * {@inheritdoc}
@@ -34,6 +38,8 @@ class AwsS3 extends Adapter
         if (!Utils::checkRequireOptions($config, static::$reqOpts) === true) {
             throw new InvalidArgumentException('Required option for adapter is missing.');
         }
+        // Set default for not required options.
+        $config = array_merge(['bucket' => '', 'prefix' => '', 'options' => []], $config);
         // Create instance and return.
         return new Filesystem(
             new AwsS3Adapter(

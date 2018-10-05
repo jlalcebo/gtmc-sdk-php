@@ -13,6 +13,10 @@ namespace Gtmc\Filesystem\Plugins;
 use InvalidArgumentException;
 use League\Flysystem\Plugin\AbstractPlugin;
 
+/**
+ * Class ListOnlyMetadata
+ * @package Gtmc\Filesystem\Plugins
+ */
 class ListOnlyMetadata extends AbstractPlugin
 {
     /**
