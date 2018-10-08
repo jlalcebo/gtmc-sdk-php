@@ -4,6 +4,7 @@
 [![Total Downloads][ico-download]][link-packagist]
 [![Software License][ico-license]][link-license]
 [![Build Status][ico-travis]][link-travis]
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjlalcebo%2Fgtmc-sdk-php.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjlalcebo%2Fgtmc-sdk-php?ref=badge_shield)
 
 GTMC SDK for PHP is it a library providing common functionality.
 
@@ -42,3 +43,6 @@ The MIT License (MIT). Please see [License File][link-license] for more informat
 [link-license]: LICENSE
 [link-travis]: https://travis-ci.org/jlalcebo/gtmc-sdk-php
 [link-contributing]: CONTRIBUTING.md
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjlalcebo%2Fgtmc-sdk-php.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjlalcebo%2Fgtmc-sdk-php?ref=badge_large)
