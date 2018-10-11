@@ -24,7 +24,10 @@
   "require": {
     "php": ">=7.2",
     "ext-pdo": "*",
-    "ext-spl": "*"
+    "ext-spl": "*",
+    "league/flysystem": "^1.0",
+    "league/flysystem-aws-s3-v3": "^1.0",
+    "league/flysystem-sftp": "^1.0"
   },
   "require-dev": {
     "jakub-onderka/php-parallel-lint": "^1.0",
