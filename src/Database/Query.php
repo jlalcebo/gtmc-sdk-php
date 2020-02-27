@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace Gtmc\Database;
+namespace GTMC\Database;
 
 use PDO;
 use PDOStatement;

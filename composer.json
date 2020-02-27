@@ -37,7 +37,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Gtmc\\": "src/"
+      "GTMC\\": "src/"
     }
   },
   "autoload-dev": {

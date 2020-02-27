@@ -8,9 +8,9 @@
 
 declare(strict_types=1);
 
-namespace Gtmc\Tests\Database;
+namespace GTMC\Tests\Database;
 
-use Gtmc\Database\Factory;
+use GTMC\Database\Factory;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
@@ -21,7 +21,7 @@ use PHPUnit\Framework\TestCase;
 class FactoryTest extends TestCase
 {
     /** @test */
-    public function throwsInvalidArgumentExceptionCreateNewConnection()
+    public function throwsInvalidArgumentExceptionCreateNewConnection(): void
     {
         $factory = new Factory();
         $this->expectException(InvalidArgumentException::class);

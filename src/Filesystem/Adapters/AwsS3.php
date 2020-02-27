@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace Gtmc\Filesystem\Adapters;
+namespace GTMC\Filesystem\Adapters;
 
 use Aws\S3\S3Client;
 use Gtmc\Utils;
@@ -19,7 +19,7 @@ use League\Flysystem\FilesystemInterface;
 
 /**
  * Class AwsS3
- * @package Gtmc\Filesystem\Adapters
+ * @package GTMC\Filesystem\Adapters
  */
 class AwsS3 extends Adapter
 {

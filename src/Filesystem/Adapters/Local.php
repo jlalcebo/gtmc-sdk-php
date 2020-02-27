@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace Gtmc\Filesystem\Adapters;
+namespace GTMC\Filesystem\Adapters;
 
 use Gtmc\Utils;
 use InvalidArgumentException;
@@ -18,7 +18,7 @@ use League\Flysystem\FilesystemInterface;
 
 /**
  * Class Local
- * @package Gtmc\Filesystem\Adapters
+ * @package GTMC\Filesystem\Adapters
  */
 class Local extends Adapter
 {

@@ -8,14 +8,14 @@
 
 declare(strict_types=1);
 
-namespace Gtmc\Filesystem\Plugins;
+namespace GTMC\Filesystem\Plugins;
 
 use InvalidArgumentException;
 use League\Flysystem\Plugin\AbstractPlugin;
 
 /**
  * Class ListOnlyMetadata
- * @package Gtmc\Filesystem\Plugins
+ * @package GTMC\Filesystem\Plugins
  */
 class ListOnlyMetadata extends AbstractPlugin
 {

@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace Gtmc\Database\Connectors;
+namespace GTMC\Database\Connectors;
 
 use PDO;
 
