@@ -42,7 +42,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Gtmc\\Tests\\": "tests/"
+      "GTMC\\Tests\\": "tests/"
     }
   },
   "minimum-stability": "stable",
