@@ -8,11 +8,11 @@
 
 declare(strict_types=1);
 
-namespace GTMC;
+namespace Gtmc;
 
 /**
  * Class Utils
- * @package GTMC
+ * @package Gtmc
  */
 class Utils
 {

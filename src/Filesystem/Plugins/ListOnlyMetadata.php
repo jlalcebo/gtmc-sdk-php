@@ -8,14 +8,14 @@
 
 declare(strict_types=1);
 
-namespace GTMC\Filesystem\Plugins;
+namespace Gtmc\Filesystem\Plugins;
 
 use InvalidArgumentException;
 use League\Flysystem\Plugin\AbstractPlugin;
 
 /**
  * Class ListOnlyMetadata
- * @package GTMC\Filesystem\Plugins
+ * @package Gtmc\Filesystem\Plugins
  */
 class ListOnlyMetadata extends AbstractPlugin
 {
@@ -39,11 +39,14 @@ class ListOnlyMetadata extends AbstractPlugin
     public function handle(string $filter = 'basename', string $directory = '', bool $recursive = false): array
     {
         $contents = $this->filesystem->listContents($directory, $recursive);
-        return array_map(function ($object) use ($filter) {
-            if (!isset($object[$filter])) {
-                throw new InvalidArgumentException('Could not get data for metadata: ' . $filter);
-            }
-            return $object[$filter];
-        }, $contents);
+        return array_map(
+            static function ($object) use ($filter) {
+                if (!isset($object[$filter])) {
+                    throw new InvalidArgumentException('Could not get data for metadata: ' . $filter);
+                }
+                return $object[$filter];
+            },
+            $contents
+        );
     }
 }

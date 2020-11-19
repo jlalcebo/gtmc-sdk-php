@@ -8,13 +8,13 @@
 
 declare(strict_types=1);
 
-namespace GTMC\Database\Connectors;
+namespace Gtmc\Database\Connectors;
 
 use PDO;
 
 /**
  * Class Connector
- * @package GTMC\Database\Connectors
+ * @package Gtmc\Database\Connectors
  */
 abstract class Connector
 {

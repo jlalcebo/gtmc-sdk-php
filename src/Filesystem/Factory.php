@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace GTMC\Filesystem;
+namespace Gtmc\Filesystem;
 
 use Gtmc\Filesystem\Adapters\Adapter;
 use Gtmc\Filesystem\Adapters\AwsS3;
@@ -19,7 +19,7 @@ use League\Flysystem\FilesystemInterface;
 
 /**
  * Class Factory
- * @package GTMC\Filesystem
+ * @package Gtmc\Filesystem
  */
 class Factory
 {

@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace GTMC\Database;
+namespace Gtmc\Database;
 
 use PDO;
 use InvalidArgumentException;
@@ -17,7 +17,7 @@ use Gtmc\Database\Connectors\MySqlConnector;
 
 /**
  * Class Factory
- * @package GTMC\Database
+ * @package Gtmc\Database
  */
 class Factory
 {

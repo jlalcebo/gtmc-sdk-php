@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-namespace GTMC\Filesystem\Adapters;
+namespace Gtmc\Filesystem\Adapters;
 
 use Gtmc\Utils;
 use InvalidArgumentException;
@@ -17,8 +17,8 @@ use League\Flysystem\FilesystemInterface;
 use League\Flysystem\Sftp\SftpAdapter;
 
 /**
- * Class SftpAdapter
- * @package GTMC\Filesystem\Adapters
+ * Class Sftp
+ * @package Gtmc\Filesystem\Adapters
  */
 class Sftp extends Adapter
 {

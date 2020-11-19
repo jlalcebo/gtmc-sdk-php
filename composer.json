@@ -1,6 +1,6 @@
 {
   "name": "gtmc/gtmc-sdk-php",
-  "description": "GTMC SDK for PHP. Use in ChargeBacks911 projects",
+  "description": "GTMC SDK for PHP. Use in Chargebacks911 projects.",
   "keywords": [
     "php",
     "php7",
@@ -37,12 +37,12 @@
   },
   "autoload": {
     "psr-4": {
-      "GTMC\\": "src/"
+      "Gtmc\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "GTMC\\Tests\\": "tests/"
+      "Gtmc\\Tests\\": "tests/"
     }
   },
   "minimum-stability": "stable",

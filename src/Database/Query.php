@@ -8,15 +8,19 @@
 
 declare(strict_types=1);
 
-namespace GTMC\Database;
+namespace Gtmc\Database;
 
 use PDO;
 use PDOStatement;
 use Gtmc\Database\Connectors\Connector;
 
+use function extract;
+use function implode;
+use function is_string;
+
 /**
  * Class Query
- * @package GTMC\Database
+ * @package Gtmc\Database
  */
 class Query
 {
@@ -162,6 +166,7 @@ class Query
      */
     public function delete(string $table): Query
     {
+        /** @noinspection SqlWithoutWhere */
         $this->query[] = 'DELETE FROM ' . $table;
         return $this;
     }
@@ -192,7 +197,7 @@ class Query
      */
     public function whereIn($column, $values, $operator = 'IN'): Query
     {
-        if (\is_string($column)) {
+        if (is_string($column)) {
             $this->wheres[] = [
                 'type' => 'WhereIn', 'column' => $column, 'values' => $values, 'operator' => $operator,
                 'boolean' => 'AND'
@@ -276,7 +281,7 @@ class Query
     protected function compileWhere(array $where): string
     {
         $value = $boolean = $column = $operator = null;
-        \extract($where, EXTR_OVERWRITE);
+        extract($where, EXTR_OVERWRITE);
         $this->bindings[] = $value;
         return "$boolean $column $operator ?";
     }
@@ -290,7 +295,7 @@ class Query
     protected function compileWhereIn(array $where): string
     {
         $values = $boolean = $column = $operator = null;
-        \extract($where, EXTR_OVERWRITE);
+        extract($where, EXTR_OVERWRITE);
         $this->bindings = array_merge($this->bindings, $values);
         $parameters = $this->implode($values, '?');
         return "$boolean $column $operator ($parameters)";
@@ -310,6 +315,7 @@ class Query
         $parameters = [];
         foreach ($values as $value) {
             ksort($value);
+            /** @noinspection SlowArrayOperationsInLoopInspection */
             $this->bindings = array_merge($this->bindings, array_values($value));
             $parameters[] = "({$this->implode($value, '?')})";
         }
@@ -327,10 +333,13 @@ class Query
      */
     protected function implode(array $columns, string $mask = '{column}'): string
     {
-        $columns = array_map(function ($column) use ($mask) {
-            return str_replace('{column}', $column, $mask);
-        }, $columns);
+        $columns = array_map(
+            static function ($column) use ($mask) {
+                return str_replace('{column}', $column, $mask);
+            },
+            $columns
+        );
 
-        return \implode(', ', $columns);
+        return implode(', ', $columns);
     }
 }

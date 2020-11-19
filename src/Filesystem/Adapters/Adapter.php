@@ -8,13 +8,13 @@
 
 declare(strict_types=1);
 
-namespace GTMC\Filesystem\Adapters;
+namespace Gtmc\Filesystem\Adapters;
 
 use League\Flysystem\FilesystemInterface;
 
 /**
  * Class Adapter
- * @package GTMC\Filesystem\Adapters
+ * @package Gtmc\Filesystem\Adapters
  */
 abstract class Adapter
 {

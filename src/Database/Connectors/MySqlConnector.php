@@ -8,13 +8,13 @@
 
 declare(strict_types=1);
 
-namespace GTMC\Database\Connectors;
+namespace Gtmc\Database\Connectors;
 
 use PDO;
 
 /**
  * Class MySqlConnector
- * @package GTMC\Downloader\Database\Connectors
+ * @package Gtmc\Database\Connectors
  */
 class MySqlConnector extends Connector
 {
